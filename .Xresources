@@ -1,0 +1,25 @@
+URxvt.font: xft:Hack-Regular:size = 8
+
+URxvt.scrollBar : true
+URxvt.scrollBar_rigt : true
+URxvt.scrollBar_floating : true
+
+URxvt.transparent : true
+URxvt.background : rgb:2E/34/36
+URxvt.foreground : rgb:EE/EE/EE
+URxvt.depth : 32
+URxvt.shading :  60
+URxvt.saveLines : 100000
+URxvt.highlightColor : rgb:FF/FF/FF
+
+URxvt.cursorBlink : true
+URxvt.fading : 0.8
+URxvt.urlLauncher : firefox
+URxvt.externalBorder : 1
+
+URxvt.BorderColor : rgb:AA/AA/AA
+URxvt.cursorColor : rgb:ff/ff/ff
+URxvt.cursorUnderLine : true
+
+
+
