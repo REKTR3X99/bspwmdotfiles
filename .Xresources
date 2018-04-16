@@ -1,14 +1,15 @@
 URxvt.font: xft:Hack-Regular:size = 8
 
+URxvt.dpi : 96
 URxvt.scrollBar : true
 URxvt.scrollBar_rigt : true
 URxvt.scrollBar_floating : true
 
 URxvt.transparent : true
-URxvt.background : rgb:2E/34/36
-URxvt.foreground : rgb:EE/EE/EE
+!URxvt.background : rgba:000/002E/0034/0036
+!URxvt.foreground : rgb:EE/EE/EE
 URxvt.depth : 32
-URxvt.shading :  60
+URxvt.shading :  50
 URxvt.saveLines : 100000
 URxvt.highlightColor : rgb:FF/FF/FF
 
@@ -18,8 +19,50 @@ URxvt.urlLauncher : firefox
 URxvt.externalBorder : 1
 
 URxvt.BorderColor : rgb:AA/AA/AA
-URxvt.cursorColor : rgb:ff/ff/ff
+!URxvt.cursorColor : rgb:ff/ff/ff
 URxvt.cursorUnderLine : true
 
+URxvt.scrollBar_right : true
+URxvt.scrollColor : #3f3f3f
+
+URxvt.cursorUnderline : true
+
+!colors
+! special
+URxvt.foreground:   #f8f8f2
+URxvt.background:   #272822
+URxvt.cursorColor:  #f8f8f2
+
+! black
+URxvt.color0:       #272822
+URxvt.color8:       #75715e
+
+! red
+URxvt.color1:       #f92672
+URxvt.color9:       #f92672
+
+! green
+URxvt.color2:       #a6e22e
+URxvt.color10:      #a6e22e
+
+! yellow
+URxvt.color3:       #f4bf75
+*.color11:      #f4bf75
+
+! blue
+*.color4:       #66d9ef
+*.color12:      #66d9ef
+
+! magenta
+*.color5:       #ae81ff
+*.color13:      #ae81ff
+
+! cyan
+*.color6:       #a1efe4
+*.color14:      #a1efe4
+
+! white
+*.color7:       #f8f8f2
+*.color15:      #f9f8f5
 
 
