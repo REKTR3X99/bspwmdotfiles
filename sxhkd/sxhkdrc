@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	gnome-terminal
+	urxvt
 
 # GNOME System Monitor
 ctrl + shift + Escape
@@ -12,7 +12,7 @@ ctrl + shift + Escape
 
 # program launcher
 super + space
-    rofi -show run -lines 10 -padding 300 -opacity "100" -font "Roboto Mono 15" -width 1368 -separator-style "none" -hide-scrollbar -color-window "argb:dd000000, argb:0002b367, argb:7bffffff" -color-normal "argb:0fffffff, #ffffff, argb:0eee8d55, #ffffff, #000000" -color-active "argb:0fdf6e30, #268bd2, argb:0eee8d55, #268bd2, #fdf6e3" -color-urgent "argb:0fdf6e30, #dc322f, argb:0eee8d55, #dc322f, #fdf6e3"	
+    rofi -show run -lines 20 -padding 50 -opacity "90" -font "Hack regular 15" -width 1200 -height 300 -separator-style "none" -hide-scrollbar -color-window "argb:dd000000, argb:0002b367, argb:7bffffff" -color-normal "argb:0fffffff, #ffffff, argb:0eee8d55, #ffffff, #000000" -color-active "argb:0fdf6e30, #268bd2, argb:0eee8d55, #268bd2, #fdf6e3" -color-urgent "argb:0fdf6e30, #dc322f, argb:0eee8d55, #dc322f, #fdf6e3"	
 
 super + shift + space
 	rofi -show drun
@@ -89,12 +89,14 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
+ctrl + {_,shift+}{1-9,0}
+
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 # focus the next/previous node in the same window
 super + {comma,period}
     bspc node -f {next,prev}.local
+
 
 #
 # preselect
