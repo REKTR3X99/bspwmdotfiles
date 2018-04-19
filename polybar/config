@@ -3,9 +3,9 @@ margin-top = 0
 margin-bottom = 0
 
 [colors]
-background = #632F9C
+background = #aa5590cc
 background-alt = #4e4e4e
-foreground = #dfdfdf
+foreground = #000000
 foreground-alt = #4e4e4e
 primary = #1f222d
 secondary = #FF6200
@@ -31,8 +31,8 @@ modules-right = eth xbacklight filesystem cpu memory
 modules-center = date
 modules-left = bspwm
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = #11371056
+foreground = #ffeeeeee
 
 underline-size = 2
 underline-color = ${colors.foreground}
@@ -46,8 +46,8 @@ tray-offset-y = 0
 tray-transparent = true
 tray-scale = 1.0
 
-font-0 = "lucy tewi:size=9"
-font-1 = "monospace:size=9"
+font-0 = "hack bold:size=11"
+font-1 = "hack bold:size=11"
 
 [module/bspwm]
 type = internal/bspwm
@@ -141,7 +141,7 @@ label =  %{F#666} %{F-} %date%  %{F#e60053}%{F-} %time%
 date = %Y-%m-%d
 time = %H:%M
 interval = 5
-format-foreground = ${colors.foreground}
+format-foreground = #9D1148
 format-padding = 1
 
 [module/volume]

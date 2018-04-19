@@ -5,6 +5,7 @@ URxvt.scrollBar : true
 URxvt.scrollBar_rigt : true
 URxvt.scrollBar_floating : true
 
+!URxvt.tintColor : #252E59
 URxvt.transparent : true
 !URxvt.background : rgba:000/002E/0034/0036
 !URxvt.foreground : rgb:EE/EE/EE
