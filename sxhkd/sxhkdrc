@@ -170,19 +170,11 @@ XF86AudioMute
 	/home/gamehelp16/Documents/dzvol -bg '#222222' -fg '#FFFFFF' -fn 'Noto Sans 11' -d 1 -y 650
 
 ### Master Volume
-XF86AudioRaiseVolume
-	amixer set Master 2.5%+,5%+; \
-	/home/gamehelp16/Documents/dzvol -bg '#222222' -fg '#FFFFFF' -fn 'Noto Sans 11' -d 1 -y 650
 
-super + XF86AudioRaiseVolume
-	amixer set Master 0.5%+,1%+; \
-	/home/gamehelp16/Documents/dzvol -bg '#222222' -fg '#FFFFFF' -fn 'Noto Sans 11' -d 1 -y 650
+#increase volume
+super + ctrl + bracketright
+	pactl -- set-sink-volume 0 +10%
 
-XF86AudioLowerVolume
-	amixer set Master 2.5%-,5%-; \
-	/home/gamehelp16/Documents/dzvol -bg '#222222' -fg '#FFFFFF' -fn 'Noto Sans 11' -d 1 -y 650
-
-super + XF86AudioLowerVolume
-	amixer set Master 0.5%-,1%-; \
-	/home/gamehelp16/Documents/dzvol -bg '#222222' -fg '#FFFFFF' -fn 'Noto Sans 11' -d 1 -y 650
-
+#lower volume
+super + ctrl + bracketleft
+	pactl -- set-sink-volume 0 -10%
