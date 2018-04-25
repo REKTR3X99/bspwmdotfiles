@@ -1,9 +1,10 @@
-URxvt.font: xft:Hack-Regular:size = 8
+URxvt.font: xft:Hack-Regular:size = 10
+
+URxvt.perl-ext-common: selection-to-clipboard
 
 URxvt.dpi : 96
-URxvt.scrollBar : true
-URxvt.scrollBar_rigt : true
-URxvt.scrollBar_floating : true
+URxvt.scrollBar : false
+!URxvt.scrollBar_floating : true
 
 !URxvt.tintColor : #252E59
 URxvt.transparent : true
@@ -15,7 +16,7 @@ URxvt.saveLines : 100000
 URxvt.highlightColor : rgb:FF/FF/FF
 
 URxvt.cursorBlink : true
-URxvt.fading : 0.8
+URxvt.fading : 1.0
 URxvt.urlLauncher : firefox
 URxvt.externalBorder : 1
 
@@ -23,7 +24,7 @@ URxvt.BorderColor : rgb:AA/AA/AA
 !URxvt.cursorColor : rgb:ff/ff/ff
 URxvt.cursorUnderLine : true
 
-URxvt.scrollBar_right : true
+!URxvt.scrollBar_right : true
 URxvt.scrollColor : #3f3f3f
 
 URxvt.cursorUnderline : true
