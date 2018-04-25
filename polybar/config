@@ -14,7 +14,7 @@ linecolor = #fba922
 
 [bar/bar]
 width = 100%
-height = 24
+height = 22
 fixed-center = true
 
 locale = en_US.UTF-8
@@ -22,7 +22,8 @@ locale = en_US.UTF-8
 enable-ipc = true
 
 padding-left = 1
-padding-right = 0
+padding-right = 1
+padding-top = 2
 
 module-margin-left = 0
 module-margin-right = 0
@@ -31,7 +32,7 @@ modules-right = eth xbacklight filesystem cpu memory
 modules-center = date
 modules-left = bspwm
 
-background = #11371056
+background = #01371056
 foreground = #ffeeeeee
 
 underline-size = 2
@@ -70,7 +71,7 @@ label-empty-padding = 2
 
 [module/eth]
 type = internal/network
-interface = enp0s3
+interface = enp3s0
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -176,7 +177,7 @@ format =                    <label>
 type =                      internal/memory
 interval =                  2
 format-prefix =             " "
-format-prefix-foreground =  ${root.foreground}
+format-prefix-foreground =  ${colors.foreground}
 ;format-underline =          ${colors.indg}
 label =                     %{A:termite -e htop:}%mb_used%(%percentage_used%%)%{A}
 
