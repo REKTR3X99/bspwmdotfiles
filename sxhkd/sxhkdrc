@@ -12,7 +12,7 @@ ctrl + shift + Escape
 
 # program launcher
 super + space
-    rofi -show run -lines 20 -padding 50 -opacity "90" -font "Hack regular 15" -width 1200 -height 300 -separator-style "none" -hide-scrollbar -color-window "argb:dd000000, argb:0002b367, argb:7bffffff" -color-normal "argb:0fffffff, #ffffff, argb:0eee8d55, #ffffff, #000000" -color-active "argb:0fdf6e30, #268bd2, argb:0eee8d55, #268bd2, #fdf6e3" -color-urgent "argb:0fdf6e30, #dc322f, argb:0eee8d55, #dc322f, #fdf6e3"	
+    rofi -show run -lines 20 -padding 5 -opacity "90" -font "Hack regular 15" -width 1100 -height 500 -separator-style "dash" -fake-transparency -color-window "argb:ff101010, argb:0002b367, argb:7bffffff" -color-normal "argb:0fffffff, #ffffff, argb:0eee8d55, #ffffff, #000000" -color-active "argb:0fdf6e30, #268bd2, argb:0eee8d55, #268bd2, #fdf6e3" -color-urgent "argb:0fdf6e30, #dc322f, argb:0eee8d55, #dc322f, #fdf6e3"	
 
 super + shift + space
 	rofi -show drun
@@ -89,9 +89,8 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-ctrl + {_,shift+}{1-9,0}
-
-	bspc {desktop -f,node -d} '^{1-9,10}'
+ctrl + {_,shift+}{1-9}
+	bspc {desktop -f,node -d} ^{1-9}
 
 # focus the next/previous node in the same window
 super + {comma,period}
@@ -158,23 +157,25 @@ ctrl + shift + Print
 	notify-send "Screenshot copied to clipboard"
 
 # Lock Desktop
-super + shift + o
+super + shift + l
 	xautolock -enable; sleep 1; xautolock -locknow
 
 
 # VOLUME
 
-### Mute
-XF86AudioMute
-	amixer set Master toggle
-	/home/gamehelp16/Documents/dzvol -bg '#222222' -fg '#FFFFFF' -fn 'Noto Sans 11' -d 1 -y 650
 
 ### Master Volume
 
 #increase volume
-super + ctrl + bracketright
-	pactl -- set-sink-volume 0 +10%
+ctrl + shift + bracketright
+	pactl -- set-sink-volume 0 +5%
+
 
 #lower volume
-super + ctrl + bracketleft
-	pactl -- set-sink-volume 0 -10%
+ctrl + shift + bracketleft
+	pactl -- set-sink-volume 0 -5%
+	
+
+ctrl + shift + m
+	pactl -- set-sink-mute 1 toggle
+
