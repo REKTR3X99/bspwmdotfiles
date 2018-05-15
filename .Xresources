@@ -1,7 +1,5 @@
 URxvt.font: xft:Hack-Regular:size = 10
 
-URxvt.perl-ext-common: selection-to-clipboard
-
 URxvt.dpi : 96
 URxvt.scrollBar : false
 !URxvt.scrollBar_floating : true
@@ -11,7 +9,7 @@ URxvt.transparent : true
 !URxvt.background : rgba:000/002E/0034/0036
 !URxvt.foreground : rgb:EE/EE/EE
 URxvt.depth : 32
-URxvt.shading :  50
+URxvt.shading :  90
 URxvt.saveLines : 100000
 URxvt.highlightColor : rgb:FF/FF/FF
 
