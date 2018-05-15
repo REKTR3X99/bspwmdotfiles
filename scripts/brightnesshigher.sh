@@ -7,4 +7,6 @@ if [ $(echo "$newbrightness <= $upperlimit" | bc) -eq 1 ]
 then
 xrandr --output DVI-D-0 --brightness $newbrightness
 
+notify-send "brightness increased to : " $newbrightness
 fi
+
