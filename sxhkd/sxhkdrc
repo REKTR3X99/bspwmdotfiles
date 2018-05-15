@@ -4,7 +4,11 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	urxvt -e fish
+
+#termina emulator zsh
+super + alt + Return
+	urxvt -e zsh
 
 # GNOME System Monitor
 ctrl + shift + Escape
@@ -89,8 +93,8 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-ctrl + {_,shift+}{1-9}
-	bspc {desktop -f,node -d} ^{1-9}
+ctrl + {_,shift+}{0-9}
+	bspc {desktop -f,node -d} '^{0-9}'
 
 # focus the next/previous node in the same window
 super + {comma,period}
@@ -157,8 +161,8 @@ ctrl + shift + Print
 	notify-send "Screenshot copied to clipboard"
 
 # Lock Desktop
-super + shift + l
-	xautolock -enable; sleep 1; xautolock -locknow
+ctrl + l
+	lock
 
 
 # VOLUME
@@ -167,15 +171,23 @@ super + shift + l
 ### Master Volume
 
 #increase volume
-ctrl + shift + bracketright
+XF86AudioRaiseVolume
 	pactl -- set-sink-volume 0 +5%
 
 
 #lower volume
-ctrl + shift + bracketleft
+XF86AudioLowerVolume
 	pactl -- set-sink-volume 0 -5%
 	
 
-ctrl + shift + m
-	pactl -- set-sink-mute 1 toggle
+XF86AudioMute
+	pactl -- set-sink-mute 0 toggle
 
+
+#Brightness Control
+
+ctrl + shift + p
+	sh ~/.config/scripts/brightnesshigher.sh
+
+ctrl + shift + o 
+	sh ~/.config/scripts/brightnesslower.sh

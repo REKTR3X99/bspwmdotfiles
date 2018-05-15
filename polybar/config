@@ -28,7 +28,7 @@ padding-top = 2
 module-margin-left = 0
 module-margin-right = 0
 
-modules-right = eth xbacklight filesystem cpu memory  
+modules-right = volume eth xbacklight filesystem cpu memory  
 modules-center = date
 modules-left = bspwm
 
@@ -52,11 +52,13 @@ font-1 = "hack bold:size=11"
 
 [module/bspwm]
 type = internal/bspwm
- 
+enable-scroll = false
+wrapping-scroll = true 
 label-focused = %index%
 label-focused-background = #C6C186
 label-focused-underline= ${colors.background-alt}
 label-focused-padding = 2
+fuzzy-match = true
 
 label-occupied = %index%
 label-occupied-padding = 2
@@ -84,7 +86,7 @@ format-disconnected =
 [module/wlan]
 type = internal/network
 interface = enp0s3
-interval = 3.0
+interval = 0.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
@@ -138,27 +140,32 @@ format-unmounted-padding = 1
 
 [module/date]
 type = internal/date
-label =  %{F#666} %{F-} %date%  %{F#e60053}%{F-} %time%
+label-foreground = #ffffff
 date = %Y-%m-%d
 time = %H:%M
 interval = 5
-format-foreground = #9D1148
+label = %date% %time%
 format-padding = 1
 
-[module/volume]
-type = internal/alsa
+[module/pulseaudio]
+type = internal/pulseaudio
+
+sink = alsa_output.pci-0000_09_00.3.analog-stereo
+use-ui-max = true
 
 format-volume = <ramp-volume> <label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
-format-muted-foreground = #666
-label-muted = Muted
+format-muted-prefix = ". "
+format-muted-foreground = #66
+label-muted =  🔇 muted
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 = 
+ramp-volume-1 = .
+ramp-volume-2 = ..
+
+
 ramp-volume-foreground = #666
 
 format-muted-padding = 1
